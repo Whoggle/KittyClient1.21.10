@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "kittyclient",
+	"version": "${version}",
+	"name": "KittyClient",
+	"description": "A mod for Hypixel Skyblock adding many fun (and a few useful) features!",
+	"authors": [
+		"PrinceKittyMeow!"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/kittyclient/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.princekittymeow.kittyclient.KittyClientClient"
+		]
+	},
+	"mixins": [
+		"kittyclient.mixins.json",
+		{
+			"config": "kittyclient.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

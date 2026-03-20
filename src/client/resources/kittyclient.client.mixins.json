@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.princekittymeow.kittyclient.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ChatHudListenerMixin",
+    "ChatHudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
