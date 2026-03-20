@@ -8,8 +8,9 @@
 		"PrinceKittyMeow!"
 	],
 	"contact": {
-		"homepage": "",
-		"sources": ""
+		"homepage": "https://github.com/Whoggle/KittyClient1.21.10",
+		"sources": "https://github.com/Whoggle/KittyClient1.21.10",
+		"issues": "https://github.com/Whoggle/KittyClient1.21.10/issues"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/kittyclient/icon.png",
