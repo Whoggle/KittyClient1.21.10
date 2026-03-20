@@ -8,6 +8,9 @@ import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.util.Identifier;
 
+/**
+ * Registers and managers the HudOverlay for imgur images.
+ */
 public class HudOverlay {
 
     private static int maxSize = 256;
