@@ -28,6 +28,12 @@ Hover over specially formatted Imgur png inserts in party chat to preview images
 An example of a message that would trigger this would be "Party > [MVP+] PrinceKittyMeow: I[mpaCz9b]"
 This would create a hoverable link in chat to show the png at: https://i.imgur.com/mpaCz9b.png
 
+To set this up:
+1. Upload a PNG file to imgur
+2. Right click it and click on "Open Image in New Tab"
+3. Copy the characters between ".com/" and ".png"
+4. Add "I[1234567]" to an autoparty message (replace 1234567 with your data) or just send it as a party message
+
 ## Commands
 - `/kc` or `/kittyclient` — Open the party commands toggle GUI
 - `/kc clearwaypoints` — Clear all active waypoints
