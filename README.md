@@ -30,6 +30,7 @@ Hover over Imgur links in chat to preview images directly in game!
 - `/kc` or `/kittyclient` — Open the party commands toggle GUI
 - `/kc clearwaypoints` — Clear all active waypoints
 - `/kc imgursize <size>` — Change the Imgur preview size
+- `/kc ping` - Play a cat noise!
 
 ## Requirements
 - Minecraft 1.21.10
