@@ -24,7 +24,8 @@ All party commands are toggleable via `/kc` or `/kittyclient`
 | `!dt` | Request downtime |
 
 ### Imgur Preview
-Hover over Imgur links in chat to preview images directly in game!
+Hover over specially formatted Imgur png inserts in chat to preview images directly in game!
+An example of an imgur would be "I[mpaCz9b]" and would create a hoverable link in chat to show the png at: https://i.imgur.com/mpaCz9b.png
 
 ## Commands
 - `/kc` or `/kittyclient` — Open the party commands toggle GUI
