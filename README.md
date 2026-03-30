@@ -18,7 +18,7 @@ All party commands are toggleable via `/kc` or `/kittyclient`
 | `!ping` | Pong! |
 | `!coords` | Request Coordinates from others with the mod |
 | `!w` | Start warp timer |
-| `!c` | Cancel warp timer |
+| `!cw` | Cancel warp timer |
 | `!fw` | Force warp |
 | `!rq` | Toggle requeue |
 | `!dt` | Request downtime |

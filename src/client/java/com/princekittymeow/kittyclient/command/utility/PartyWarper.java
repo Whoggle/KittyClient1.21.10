@@ -30,12 +30,12 @@ public class PartyWarper {
     public static void start() {
         if (!PlayerData.isPartyLeader()) return;
         if (active) {
-            CommandSender.sendPartyMessage("[KC] A warp is already in progress! Use !fw to force warp or !c to cancel.");
+            CommandSender.sendPartyMessage("[KC] A warp is already in progress! Use !fw to force warp or !cw to cancel.");
             return;
         }
         active = true;
         ticksRemaining = WARP_DELAY;
-        CommandSender.sendPartyMessage("[KC] Warping in 5 seconds, !c to cancel, !fw to force warp");
+        CommandSender.sendPartyMessage("[KC] Warping in 5 seconds, !cw to cancel, !fw to force warp");
     }
 
     /**

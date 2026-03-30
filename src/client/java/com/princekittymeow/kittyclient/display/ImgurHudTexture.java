@@ -49,6 +49,8 @@ public class ImgurHudTexture {
             } catch (Exception e) {
                 System.out.println("[KittyClient] Failed to load Imgur texture: " + e.getMessage());
                 isLoading = false;
+                isLoaded = false;
+                loadedUrl = null;
             }
         });
 

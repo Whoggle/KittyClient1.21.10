@@ -1,5 +1,6 @@
 package com.princekittymeow.kittyclient.player;
 
+import com.princekittymeow.kittyclient.dungeon.DungeonCommands;
 import net.minecraft.client.MinecraftClient;
 
 /**
@@ -24,6 +25,9 @@ public class PlayerData {
      */
     public static void setIsPartyLeader(boolean state) {
         partyLeader = state;
+        if (!partyLeader  && DungeonCommands.willRequeue()) {
+            DungeonCommands.toggleRequeue();
+        }
     }
 
     /**

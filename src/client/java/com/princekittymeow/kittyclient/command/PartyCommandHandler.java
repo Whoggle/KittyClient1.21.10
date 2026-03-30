@@ -26,7 +26,7 @@ public class PartyCommandHandler {
                 if (!PartyCommandConfig.pingEnabled) return;
                 CommandSender.sendPartyMessage("[KC] Pong!", 10);
             }
-            case "c"                ->  {
+            case "cw"                ->  {
                 if (!PartyCommandConfig.cancelEnabled) return;
                 PartyWarper.cancel();
             }

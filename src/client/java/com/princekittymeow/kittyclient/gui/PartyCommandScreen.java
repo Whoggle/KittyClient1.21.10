@@ -1,6 +1,7 @@
 package com.princekittymeow.kittyclient.gui;
 
 import com.princekittymeow.kittyclient.command.CommandSender;
+import com.princekittymeow.kittyclient.config.ConfigManager;
 import com.princekittymeow.kittyclient.config.PartyCommandConfig;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
@@ -53,6 +54,9 @@ public class PartyCommandScreen extends Screen {
         addToggle(col1, btnY + BUTTON_SPACING * 3, "!ping",
                 PartyCommandConfig.pingEnabled,
                 b -> { PartyCommandConfig.pingEnabled = !PartyCommandConfig.pingEnabled; refreshButtons(); });
+        addToggle(col1, btnY + BUTTON_SPACING * 4, "Leave Messages",
+                PartyCommandConfig.playerSalutationEnabled,
+                b -> { PartyCommandConfig.playerSalutationEnabled = !PartyCommandConfig.playerSalutationEnabled; refreshButtons(); });
 
         // Utility
         addToggle(col2, btnY, "!coords",
@@ -61,7 +65,7 @@ public class PartyCommandScreen extends Screen {
         addToggle(col2, btnY + BUTTON_SPACING, "!w (warp)",
                 PartyCommandConfig.warpEnabled,
                 b -> { PartyCommandConfig.warpEnabled = !PartyCommandConfig.warpEnabled; refreshButtons(); });
-        addToggle(col2, btnY + BUTTON_SPACING * 2, "!c (cancel)",
+        addToggle(col2, btnY + BUTTON_SPACING * 2, "!cw (cancel)",
                 PartyCommandConfig.cancelEnabled,
                 b -> { PartyCommandConfig.cancelEnabled = !PartyCommandConfig.cancelEnabled; refreshButtons(); });
         addToggle(col2, btnY + BUTTON_SPACING * 3, "!fw (force warp)",
@@ -84,7 +88,10 @@ public class PartyCommandScreen extends Screen {
 
     private void addToggle(int x, int y, String label, boolean state, ButtonWidget.PressAction action) {
         String prefix = state ? "§a✔ " : "§c✘ ";
-        this.addDrawableChild(ButtonWidget.builder(Text.literal(prefix + label), action)
+        this.addDrawableChild(ButtonWidget.builder(Text.literal(prefix + label), b -> {
+                    action.onPress(b);
+                    ConfigManager.save();
+                })
                 .dimensions(x, y, BUTTON_WIDTH, BUTTON_HEIGHT)
                 .build());
     }

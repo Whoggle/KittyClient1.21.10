@@ -83,6 +83,7 @@ public class DungeonCommands {
      */
     public static void requeue(FloorType floor) {
         if (floor == null || floor == FloorType.NONE) return;
+        if (!PlayerData.isPartyLeader()) toggleRequeue();
         // Queue the actual requeue command after a short delay
         CommandSender.joinDungeon(floor.getInternalName());
     }

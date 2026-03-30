@@ -1,6 +1,7 @@
 package com.princekittymeow.kittyclient.chat;
 
 import com.princekittymeow.kittyclient.command.CommandSender;
+import com.princekittymeow.kittyclient.config.PartyCommandConfig;
 import com.princekittymeow.kittyclient.dungeon.*;
 import com.princekittymeow.kittyclient.player.PlayerData;
 import com.princekittymeow.kittyclient.waypoint.WaypointManager;
@@ -143,6 +144,7 @@ public class ChatMessageHandler {
      * @param rawName The name of the player that left the party
      */
     private static void handlePlayerLeft(String rawName) {
+        if (!PartyCommandConfig.playerSalutationEnabled) return;
         String name = MessageStripper.stripRank(rawName);
         DungeonCommands.playerLeft = true;
 

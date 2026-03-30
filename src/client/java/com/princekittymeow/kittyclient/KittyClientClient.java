@@ -5,6 +5,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.princekittymeow.kittyclient.chat.ChatMessageHandler;
 import com.princekittymeow.kittyclient.command.CommandSender;
 import com.princekittymeow.kittyclient.command.utility.PartyWarper;
+import com.princekittymeow.kittyclient.config.ConfigManager;
 import com.princekittymeow.kittyclient.display.HudOverlay;
 import com.princekittymeow.kittyclient.dungeon.DungeonCommands;
 import com.princekittymeow.kittyclient.gui.PartyCommandScreen;
@@ -32,6 +33,7 @@ public class KittyClientClient implements ClientModInitializer {
 		HudOverlay.register();
 		WaypointRenderer.register();
 		WaypointTriggerRegistry.register();
+		ConfigManager.load();
 
 		// register tick events
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
