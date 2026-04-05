@@ -12,6 +12,7 @@ public class PartyCommandConfig {
     public static boolean eightBallEnabled = true;
     public static boolean refEnabled = true;
     public static boolean meowEnabled = true;
+    public static boolean playerSalutationEnabled = true;
 
     // Util
     public static boolean warpEnabled = true;
@@ -23,8 +24,6 @@ public class PartyCommandConfig {
     public static boolean requeueEnabled = true;
     public static boolean downtimeEnabled = true;
 
-    // Player salutation
-    public static boolean playerSalutationEnabled = true;
 
     public static Map<String, Object> toMap() {
         Map<String, Object> map = new LinkedHashMap<>();

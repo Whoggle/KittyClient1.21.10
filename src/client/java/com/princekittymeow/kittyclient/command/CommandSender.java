@@ -79,7 +79,7 @@ public class CommandSender {
         int x = client.player.getBlockX();
         int y = client.player.getBlockY();
         int z = client.player.getBlockZ();
-        sendPartyMessage("x: " + x + "y: " + y + "z: " + z + " | Location Requested");
+        sendPartyMessage("x: " + x + " y: " + y + " z: " + z + " | Location Requested");
     }
 }
 

@@ -6,6 +6,7 @@ import com.princekittymeow.kittyclient.command.fun.Reference;
 import com.princekittymeow.kittyclient.command.utility.PartyWarper;
 import com.princekittymeow.kittyclient.config.PartyCommandConfig;
 import com.princekittymeow.kittyclient.dungeon.DungeonCommands;
+import com.princekittymeow.kittyclient.player.PlayerData;
 
 /**
  * A class to handle party chat commands.
@@ -27,15 +28,15 @@ public class PartyCommandHandler {
                 CommandSender.sendPartyMessage("[KC] Pong!", 10);
             }
             case "cw"                ->  {
-                if (!PartyCommandConfig.cancelEnabled) return;
+                if (!PartyCommandConfig.cancelEnabled || !PlayerData.isPartyLeader()) return;
                 PartyWarper.cancel();
             }
             case "w"                -> {
-                if (!PartyCommandConfig.warpEnabled) return;
+                if (!PartyCommandConfig.warpEnabled || !PlayerData.isPartyLeader()) return;
                 PartyWarper.start();
             }
             case "fw"               -> {
-                if (!PartyCommandConfig.forceWarpEnabled) return;
+                if (!PartyCommandConfig.forceWarpEnabled || !PlayerData.isPartyLeader()) return;
                 CommandSender.warp();
             }
             case "8ball"            -> {

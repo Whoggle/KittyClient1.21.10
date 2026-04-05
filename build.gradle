@@ -16,6 +16,10 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		name = "Team Resourceful Maven"
+		url = "https://maven.teamresourceful.com/repository/maven-public"
+	}
 }
 
 loom {
@@ -41,6 +45,9 @@ dependencies {
 
 	// Google's Gson
 	implementation 'com.google.code.gson:gson:2.10.1'
+
+	// Resourceful Config implementation
+	modImplementation "com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-1.21.9:3.9.1"
 	
 }
 

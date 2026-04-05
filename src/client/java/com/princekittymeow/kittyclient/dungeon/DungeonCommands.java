@@ -72,7 +72,10 @@ public class DungeonCommands {
      * Toggles the requeue boolean.
      */
     public static void toggleRequeue() {
-        if (!PlayerData.isPartyLeader()) return;
+        if (!PlayerData.isPartyLeader()) {
+            requeue = false;
+            return;
+        }
         requeue = !requeue;
         CommandSender.sendPartyMessage(requeue ? "[KC] Toggled Requeue On" : "[KC] Toggled Requeue Off", 15);
     }
@@ -83,7 +86,10 @@ public class DungeonCommands {
      */
     public static void requeue(FloorType floor) {
         if (floor == null || floor == FloorType.NONE) return;
-        if (!PlayerData.isPartyLeader()) toggleRequeue();
+        if (!PlayerData.isPartyLeader()) {
+            requeue = false;
+            return;
+        }
         // Queue the actual requeue command after a short delay
         CommandSender.joinDungeon(floor.getInternalName());
     }

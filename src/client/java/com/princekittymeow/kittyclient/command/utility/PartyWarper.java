@@ -28,7 +28,10 @@ public class PartyWarper {
      * Handles when someone calls the command !w.
      */
     public static void start() {
-        if (!PlayerData.isPartyLeader()) return;
+        if (!PlayerData.isPartyLeader()) {
+            active = false;
+            return;
+        }
         if (active) {
             CommandSender.sendPartyMessage("[KC] A warp is already in progress! Use !fw to force warp or !cw to cancel.");
             return;
@@ -39,10 +42,13 @@ public class PartyWarper {
     }
 
     /**
-     * Handles when someone calls the command !c.
+     * Handles when someone calls the command !cw.
      */
     public static void cancel() {
-        if (!PlayerData.isPartyLeader()) return;
+        if (!PlayerData.isPartyLeader()) {
+            active = false;
+            return;
+        }
         if (!active) {
             CommandSender.sendPartyMessage("[KC] There is no warp currently in progress.");
             return;
